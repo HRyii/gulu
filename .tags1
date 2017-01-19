@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Company	E:\gulu\core\model\Company.php	/^class Company extends MModel$/;"	class	line:8
+hashids	E:\gulu\core\model\Company.php	/^    private static $hashids = null;$/;"	variable	line:10
+hashids	E:\gulu\core\model\Company.php	/^    private static $hashids = null;$/;"	variable	line:10
+__construct	E:\gulu\core\model\Company.php	/^    public function __construct($data = [])$/;"	function	line:11
+district	E:\gulu\core\model\Company.php	/^    public function district()$/;"	function	line:19
+getNumberAttr	E:\gulu\core\model\Company.php	/^    public function getNumberAttr($number)$/;"	function	line:24
+setNumberAttr	E:\gulu\core\model\Company.php	/^    public function setNumberAttr($number)$/;"	function	line:29

@@ -1,0 +1,8 @@
+.idea
+.env
+.env.ps1
+*.log
+thinkphp
+vendor
+uploads
+public/uploads

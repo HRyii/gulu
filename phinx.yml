@@ -1,0 +1,36 @@
+paths:
+    migrations: %%PHINX_CONFIG_DIR%%/database/migrations
+    seeds: %%PHINX_CONFIG_DIR%%/database/seeds
+
+environments:
+    default_migration_table: phinxlog
+    default_database: development
+    production:
+        adapter: mysql
+        host: %%PHINX_DBHOST%%
+        name: %%PHINX_DBNAME%%
+        user: %%PHINX_DBUSER%%
+        pass: %%PHINX_DBPASS%%
+        port: 3306
+        charset: utf8
+        table_prefix: gulu_
+
+    development:
+        adapter: mysql
+        host: %%PHINX_DBHOST%%
+        name: %%PHINX_DBNAME%%
+        user: %%PHINX_DBUSER%%
+        pass: %%PHINX_DBPASS%%
+        port: 3306
+        charset: utf8
+        table_prefix: gulu_
+
+    testing:
+        adapter: mysql
+        host: %%PHINX_DBHOST%%
+        name: %%PHINX_DBNAME%%
+        user: %%PHINX_DBUSER%%
+        pass: %%PHINX_DBPASS%%
+        port: 3306
+        charset: utf8
+        table_prefix: gulu_

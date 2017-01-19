@@ -1,0 +1,28 @@
+before_script:
+    - composer install
+
+stages:
+    - test
+    - deploy
+
+test:
+    stage: test
+    script:
+        - ./vendor/bin/phpunit
+
+deploy_staging:
+    stage: deploy
+    script:
+        - REPO=/usr/share/httpd/yele-repos/yele-admin.master
+        - cp .env.dist .env
+        - sed -i "s/PHINX_DBHOST=/PHINX_DBHOST=$PHINX_DBHOST/" .env
+        - sed -i "s/PHINX_DBNAME=/PHINX_DBNAME=$PHINX_DBNAME/" .env
+        - sed -i "s/PHINX_DBUSER=/PHINX_DBUSER=$PHINX_DBUSER/" .env
+        - sed -i "s/PHINX_DBPASS=/PHINX_DBPASS=$PHINX_DBPASS/" .env
+        - ./vendor/bin/phinx migrate
+        - cp -r . $REPO.new
+        - mv $REPO $REPO.tmp
+        - mv $REPO.new $REPO
+        - rm -rf $REPO.tmp
+    only:
+        - master
